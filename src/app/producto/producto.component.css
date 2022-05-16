@@ -1,0 +1,38 @@
+.contenido{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 50px;
+}
+
+.contenido .img{
+    box-shadow: 0px 0px 15px #aaaaaa;
+}
+
+.contenido .img img{
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.content h1 {
+    text-align: center;
+}
+
+.detalles{
+    display: flex;
+}
+
+.detalles div{
+    margin: 0 8px 0 8px;
+}
+
+.descripcion{
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px #aaaaaa;
+}

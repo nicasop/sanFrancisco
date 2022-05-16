@@ -1,0 +1,31 @@
+<div class="contenido">
+    <div class="img"> <img src="../../assets/{{productoSelesc?.imagen}}" alt=""> </div>
+    <div class="content">
+        <h1> {{ productoSelesc?.nombre }} </h1>
+        <table>
+            <tr>
+                <td>Diametro</td>
+                <td>kg/m</td>
+            </tr>
+            <tr *ngFor="let dimension of productoSelesc?.especificaciones">
+                <td>{{ dimension.medida }}</td>
+                <td>{{ dimension.peso }}</td>
+            </tr>
+        </table>
+        <div class="detalles">
+            <div>
+                <label for="cant">Cantidad:</label>
+                <input type="number" name="cant" id="cant" value="1"/>
+            </div>
+            <div>
+                <label for="pre">Precio:</label>
+                <input type="number" name="pre" id="pre" value="10.33"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="descripcion">
+    <h2>Descripci&oacute;n</h2>
+    <p>{{ productoSelesc?.descripcion }}</p>
+</div>
+<app-footer></app-footer>

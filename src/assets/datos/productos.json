@@ -1,0 +1,115 @@
+[
+    {
+        "codigo":"1",
+        "nombre":"Varrilla Corugada",
+        "stock": 100,
+        "marca":"adelca",
+        "imagen":"varillaCorrugada.png",
+        "descripcion":"Es una varilla de acero de sección circular, con resaltes transversales que asegura una alta adherencia con el concreto; laminada en caliente y termotratada que garantiza una mayor flexibilidad y seguridad que el acero común. Soldable, cumpliendo la norma AWSD1.4, según lo especificado en la Norma Ecuatoriana de la Construcción (NEC). Su presentación en rollo reduce desperdicio de retazos y despuntes y facilita el proceso de figuración.",
+        "descripCorta":"Es una varilla de acero de sección circular, con resaltes transversales que asegura una alta adherencia",
+        "especificaciones":[
+            {
+                "medida":8,
+                "peso":0.395,
+                "precio":5.20
+            },
+            {
+                "medida":10,
+                "peso":0.616,
+                "precio":7.50
+            },
+            {
+                "medida":14,
+                "peso":1.208,
+                "precio":8.25
+            },
+            {
+                "medida":16,
+                "peso":1.578,
+                "precio":10.33
+            }
+        ]
+    },
+    {
+        "codigo":"2",
+        "nombre":"Varrilla Lisa",
+        "stock": 100,
+        "marca":"adelca",
+        "imagen":"varillaLisa.png",
+        "descripcion":"Es una varilla recta de sección circular, lisa; laminada en caliente y termotratada para garantizar mayor flexibilidad y seguridad que el acero común. Soldable, cumpliendo la norma AWS D1.4, según lo especificado en la Norma Ecuatoriana de la Construcción (NEC).",
+        "descripCorta":"Es una varilla recta de sección circular, lisa; laminada en caliente y termotratada para garantizar mayor flexibilidad",
+        "especificaciones":[
+            {
+                "medida":25,
+                "peso":3.853,
+                "precio":4.50
+            },
+            {
+                "medida":28,
+                "peso":4.834,
+                "precio":6.50
+            },
+            {
+                "medida":32,
+                "peso":6.313,
+                "precio":7.25
+            },
+            {
+                "medida":36,
+                "peso":7.990,
+                "precio":9.33
+            }
+        ]
+    },
+    {
+        "codigo":"3",
+        "nombre":"Mallas Electrosoldadas",
+        "stock": 100,
+        "marca":"adelca",
+        "imagen":"mallaE.png",
+        "descripcion":"Panel electrosoldado formado por varillas lisas o corrugadas en varios diámetros dispuestas perpendicularmente formando recuadros regulares de 10 a 50 cm. Participa de las características físicas y ecánicas de la varilla trefilada.",
+        "descripCorta":"Panel electrosoldado formado por varillas lisas o corrugadas",
+        "especificaciones":[
+            {
+                "medida":3.5,
+                "peso":15.154,
+                "precio":4.50
+            },
+            {
+                "medida":4,
+                "peso":19.826,
+                "precio":8.50
+            },
+            {
+                "medida":4.5,
+                "peso":25.080,
+                "precio":10.25
+            },
+            {
+                "medida":5,
+                "peso":30.948,
+                "precio":12.33
+            },
+            {
+                "medida":6,
+                "peso":33.167,
+                "precio":14.33
+            },
+            {
+                "medida":7,
+                "peso":45.131,
+                "precio":17.33
+            },
+            {
+                "medida":8,
+                "peso":58.951,
+                "precio":20.33
+            },
+            {
+                "medida":10,
+                "peso":123.800,
+                "precio":23.33
+            }
+        ]
+    }
+]
