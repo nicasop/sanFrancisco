@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+}
+
+.productos{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 25px;
+}
+
+.producto{
+    width: 31vw;
+}
