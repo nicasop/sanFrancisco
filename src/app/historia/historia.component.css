@@ -1,0 +1,37 @@
+.hero{
+    display: flex;
+    padding: 20px 50px;
+    justify-content: center;
+}
+
+.hero-content{
+    width: 1000px;
+    display: flex;
+}
+
+.right{
+    padding-left: 8px;
+}
+
+h1{
+    text-align: center;
+}
+
+.right p {
+    text-align: justify;
+}
+
+.ubicacion{
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.ubicacion h1{
+    padding-right: 25px;
+}
+
+#map{
+    height: 380px;
+    width: 50vw;
+}

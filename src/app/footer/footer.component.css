@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #333333;
+    color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0 40px 0;
+}
+
+.empre{
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    padding: 25px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 400;
+    padding: 5px 15px;
+}
+
+.informacion{
+    font-size: 1.1rem;
+    color: #888888;
+}
