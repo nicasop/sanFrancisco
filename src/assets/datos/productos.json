@@ -1,0 +1,10 @@
+{
+    "codigo":1,
+    "nombre":"Varrilla Corugada",
+    "stock": 100,
+    "descripcion":"",
+    "especificaciones":{
+        "medidas":[],
+        "pesos":[]
+    }
+}
