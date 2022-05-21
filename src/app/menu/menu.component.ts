@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataSharingService } from '../data-sharing.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +9,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  menu:any;
+  isUserLoggedIn!: boolean;
+  menuPu = [{
+    "titulo":"Historia",
+    "clase":"",
+    "url": "historia",
+  },
+  {
+    "titulo":"Catálogo",
+    "clase":"",
+    "url": "catalogo",
+  },
+  {
+    "titulo":"Iniciar Sesión",
+    "clase":"sesion",
+    "url": "iniciar-sesion",
+  }]
+
+  // menuPri = [{
+  //   "titulo":"Cerrar Sesión",
+  //   "clase":"sesion",
+  //   "url": "null",
+  //   "fun": this.cerrarSesion()
+  // }]
+  constructor(private router:Router, private dataSharingService:DataSharingService) {
+    this.dataSharingService.idUserLoggedIn.subscribe( value => {
+      this.isUserLoggedIn = value;
+    })
+  }
 
   ngOnInit(): void {
   }
 
+  cerrarSesion(){
+    sessionStorage.removeItem('usuario');
+    this.dataSharingService.idUserLoggedIn.next(false);
+    console.log('Sesión Cerrada');
+    this.router.navigateByUrl('');
+  }
 }

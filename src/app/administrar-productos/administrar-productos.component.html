@@ -1,0 +1,31 @@
+<div class="container contenedor">
+    <h2>Inventario</h2>
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Marca</th>
+                        <!-- <th>Categoria</th> -->
+                        <th>Stock</th>
+                        <th>Imagen</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let producto of productos">
+                        <td>{{producto.codigo}}</td>
+                        <td>{{producto.nombre}}</td>
+                        <td>{{producto.marca}}</td>
+                        <!-- <td>Hierro</td> -->
+                        <td>{{producto.stock}}</td>
+                        <td><img src="../../assets/{{producto.imagen}}" alt="imagen del producto" width="80" height="80">  </td>
+                        <td>VER MAS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

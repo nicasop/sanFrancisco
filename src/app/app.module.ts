@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule,Route } from '@angular/router';
-import { DataService } from './data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
@@ -12,6 +11,12 @@ import { FooterComponent } from './footer/footer.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { ProductoComponent } from './producto/producto.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
+import { AdministrarProductosComponent } from './administrar-productos/administrar-productos.component';
+
+import { DataService } from './data.service';
+import { DataSharingService } from './data-sharing.service';
+
+import { AuthenticatedGuard } from './authenticated.guard';
 
 const rutas:Route[]=[
   {path: '', component:HistoriaComponent,pathMatch:'full'},
@@ -19,6 +24,7 @@ const rutas:Route[]=[
   {path: 'catalogo', component:CatalogoComponent},
   {path: 'producto/:id', component:ProductoComponent},
   {path: 'iniciar-sesion', component:IniciarSesionComponent},
+  {path: 'administrador',component:AdministrarProductosComponent, canActivate:[AuthenticatedGuard]},
   {path: '**', redirectTo:''}
 ]; 
 
@@ -30,7 +36,8 @@ const rutas:Route[]=[
     FooterComponent,
     CatalogoComponent,
     ProductoComponent,
-    IniciarSesionComponent
+    IniciarSesionComponent,
+    AdministrarProductosComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +48,7 @@ const rutas:Route[]=[
   exports: [
     RouterModule
   ],
-  providers: [DataService],
+  providers: [DataService,AuthenticatedGuard,DataSharingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

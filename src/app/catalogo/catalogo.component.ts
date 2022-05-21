@@ -15,7 +15,6 @@ export class CatalogoComponent implements OnInit {
     this.dataService.obtenerDatos().subscribe(data => 
       {
         this.productos = data;  
-        console.log(this.productos);
       })
   }
 
