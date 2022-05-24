@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DataService } from '../data.service';
 import { Product } from '../Product';
+import { ProductDataService } from '../product-data.service';
 
 @Component({
   selector: 'app-producto',
@@ -10,31 +10,22 @@ import { Product } from '../Product';
 })
 export class ProductoComponent implements OnInit {
 
-  idProducto:null | string = null;
-  inventario:Product[] = [];
-  productoSelesc:Product | null = null;
+  idProducto:null | number = null;
+  producto:Product | null = null ;
 
-  constructor( private _route: ActivatedRoute, private dataService:DataService) { 
-    this.idProducto = this._route.snapshot.paramMap.get('id');
-    console.log(this.idProducto);
-    this.dataService.obtenerDatos().subscribe(data => 
-      {
-        this.inventario = data;  
-        console.log(this.inventario);
-      })
+  constructor( private route: ActivatedRoute, private dataService:ProductDataService) { 
   }
 
   ngOnInit(): void {
+    this.getProducto();
   }
 
-  ngAfterContentChecked(): void {
-    var producto;
-    this.inventario.forEach(element => {
-      if(element.codigo == this.idProducto){
-        this.productoSelesc = element;
-      } 
-    }); 
-    
+  getProducto(){
+    this.idProducto = Number(this.route.snapshot.paramMap.get('codigo'));
+    console.log(this.idProducto);
+    this.dataService.getProducto(this.idProducto).subscribe(data => {
+      this.producto = data;
+    });
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
+import { ProductDataService } from '../product-data.service';
 import { Product } from '../Product';
 
 @Component({
@@ -11,14 +11,18 @@ export class CatalogoComponent implements OnInit {
 
   productos:Product[] = [];
 
-  constructor( private dataService:DataService) { 
-    this.dataService.obtenerDatos().subscribe(data => 
-      {
-        this.productos = data;  
-      })
+  constructor( private dataService:ProductDataService) { 
   }
 
   ngOnInit(): void {
+    this.getProductos();
+  }
+
+  getProductos(){
+    this.dataService.getProductos().subscribe(data => 
+      {
+        this.productos = data;  
+      })
   }
 
 }

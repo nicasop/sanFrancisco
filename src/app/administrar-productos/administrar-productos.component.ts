@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../Product';
-import { DataService } from '../data.service';
+import { ProductDataService } from '../product-data.service';
 
 @Component({
   selector: 'app-administrar',
@@ -11,13 +11,22 @@ export class AdministrarProductosComponent implements OnInit {
 
   productos:Product[] = [];
 
-  constructor(private dataServide:DataService) { 
-    this.dataServide.obtenerDatos().subscribe(data => {
-      this.productos = data;
-    })
+  constructor(private dataService:ProductDataService) { 
+  }
+  ngOnInit(): void {
+    this.getProductos();
+  }
+  
+  getProductos(){
+    this.dataService.getProductos().subscribe(data => 
+      {
+        this.productos = data;  
+      })
   }
 
-  ngOnInit(): void {
+  borrar(producto: Product): void {
+    this.productos = this.productos.filter(h => h !== producto);
+    this.dataService.deleteProducto(producto).subscribe();
   }
 
 }

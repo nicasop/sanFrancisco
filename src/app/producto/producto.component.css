@@ -25,10 +25,13 @@
 
 .detalles{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.detalles div{
-    margin: 0 8px 0 8px;
+.detalles img{
+    width: 80%;
+    height: 80%;
 }
 
 .descripcion{

@@ -8,6 +8,8 @@
             <li> <a routerLink="iniciar-sesion" class="sesion">Iniciar Sesión</a> </li> -->
         </ul>
         <ul *ngIf="isUserLoggedIn">
+            <li *ngFor="let item of menuPri"> <a routerLink="{{item.url}}" 
+                class="{{item.clase}}">{{item.titulo}}</a> </li>
             <li><a routerLink="historia" class="sesion" 
                 (click)="cerrarSesion();">Cerrar Sesi&oacute;n</a></li>
         </ul>

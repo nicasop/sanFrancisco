@@ -27,12 +27,11 @@ export class MenuComponent implements OnInit {
     "url": "iniciar-sesion",
   }]
 
-  // menuPri = [{
-  //   "titulo":"Cerrar Sesión",
-  //   "clase":"sesion",
-  //   "url": "null",
-  //   "fun": this.cerrarSesion()
-  // }]
+  menuPri = [{
+    "titulo":"Administrador",
+    "clase":"",
+    "url": "administrador",
+  }]
   constructor(private router:Router, private dataSharingService:DataSharingService) {
     this.dataSharingService.idUserLoggedIn.subscribe( value => {
       this.isUserLoggedIn = value;

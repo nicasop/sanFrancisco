@@ -1,11 +1,11 @@
 <h1>Productos</h1>
 <div class="productos">
     <div class="card producto" *ngFor="let producto of productos">
-        <img src="../../assets/{{ producto.imagen }}" class="card-img-top" alt="imagen de producto">
+        <img [src]=producto.imagen class="card-img-top" alt="imagen de producto">
         <div class="card-body">
             <h5 class="card-title">{{ producto.nombre }}</h5>
-            <p class="card-text">{{ producto.descripCorta }}</p>
-            <a [routerLink]="['/producto',producto.codigo]">Ver mas...</a>
+            <p class="card-text">{{ producto.descripcion.substr(0,100) }}...</p>
+            <a [routerLink]="['/producto',producto.id]">Ver mas...</a>
         </div>
     </div>
 </div>
