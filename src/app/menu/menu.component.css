@@ -4,7 +4,7 @@ header {
     color: #ffffff;
     justify-content: space-between;
     align-items: center;
-    padding: 0 13px;
+    padding: 10px 13px;
     box-shadow: 0 4px 4px grey;
     position: relative;
     z-index: 1;
@@ -16,6 +16,7 @@ header {
 
 nav {
     display: flex;
+    justify-content: flex-end;
 }
 
 a {
@@ -27,6 +28,8 @@ a {
 
 nav ul {
     list-style-type: none;
+    margin-top: 16px;
+    margin-bottom: 0;
 }
 
 nav ul li {

@@ -1,0 +1,8 @@
+.contenedor{
+    border: solid 2px #888888;
+    box-shadow: 6px 6px 8px #888888;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
